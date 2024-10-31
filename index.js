@@ -45,6 +45,7 @@ app.use('/users', userRouter)
 
 io.on('connect', function (socket) {
     socket.on('send-message', async (payload) => {
+        // Validate payload - Homework
         console.log(payload)
         const chat = new Chat({
             byUserId: payload.byUserId,
